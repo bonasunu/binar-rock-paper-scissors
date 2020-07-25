@@ -25,14 +25,14 @@
             <h1 class="player">
                 PLAYER 1
             </h1>
-            <figure>
-                <img src="./assets/rock.png" alt="Rock" class="choice">
+            <figure class="figure" onclick="choose('rock')">
+                <img src="./assets/rock.png" alt="Rock" class="choice-player">
             </figure>
-            <figure>
-                <img src="./assets/paper.png" alt="Paper" class="choice">
+            <figure class="figure" onclick="choose('paper')">
+                <img src="./assets/paper.png" alt="Paper" class="choice-player">
             </figure>
-            <figure>
-                <img src="./assets/scissors.png" alt="Scissors" class="choice">
+            <figure class="figure" onclick="choose('scissor')">
+                <img src="./assets/scissors.png" alt="Scissors" class="choice-player">
             </figure>
         </div>
         <div class="result">
@@ -41,19 +41,40 @@
                     VS
                 </p>
             </div>
+            <div class="win-player">
+                <p>
+                    PLAYER 1
+                </p>
+                <p>
+                    WIN
+                </p>
+            </div>
+            <div class="win-com">
+                <p>
+                    COM
+                </p>
+                <p>
+                    WIN
+                </p>
+            </div>
+            <div class="draw">
+                <p>
+                    DRAW
+                </p>
+            </div>
         </div>
         <div class="com">
             <h1 class="player">
                 COM
             </h1>
-            <figure>
-                <img src="./assets/rock.png" alt="Rock" class="choice">
+            <figure class="figure">
+                <img src="./assets/rock.png" alt="Rock" class="choice-com">
             </figure>
-            <figure>
-                <img src="./assets/paper.png" alt="Paper" class="choice">
+            <figure class="figure">
+                <img src="./assets/paper.png" alt="Paper" class="choice-com">
             </figure>
-            <figure>
-                <img src="./assets/scissors.png" alt="Scissors" class="choice">
+            <figure class="figure">
+                <img src="./assets/scissors.png" alt="Scissors" class="choice-com">
             </figure>
         </div>
     </main>

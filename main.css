@@ -27,9 +27,26 @@ body {
     vertical-align: middle;
 }
 
-.choice {
+.choice-player {
     max-width: 5rem;
     height: auto;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.choice-com {
+    max-width: 5rem;
+    height: auto;
+    margin: 1rem;
+}
+
+.chosen {
+    background-color: #C4C4C4;
+    border-radius: 1rem;
+}
+
+.choice-player:hover {
+    transform: scale(1.2) rotate(15deg);
 }
 
 .player {
@@ -37,11 +54,60 @@ body {
     letter-spacing: 0.2rem;
 }
 
+.result {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-top: 3rem;
+    width: 12rem;
+}
+
 .vs {
     color: #BD0000;
     font-size: 8rem;
     font-weight: bolder;
     font-family: sans-serif;
+    display: block;
+}
+
+.win-player,
+.win-com {
+    color: white;
+    font-family: sans-serif;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    margin-top: 10rem;
+    background-color: #4C9654;
+    transform: rotate(-20deg);
+}
+
+.win-player {
+    display: none;
+}
+
+.win-com {
+    display: none;
+}
+
+.draw {
+    color: white;
+    font-family: sans-serif;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    margin-top: 10rem;
+    background-color: #035B0C;
+    transform: rotate(-20deg);
+    height: 5rem;
+    padding-top: 10%;
+}
+
+.draw {
+    display: none;
 }
 
 .refresh {
@@ -51,4 +117,9 @@ body {
 .refresh-btn {
     max-width: 3rem;
     height: auto;
+    cursor: pointer;
+}
+
+.refresh-btn:hover {
+    transform: scale(1.2);
 }
