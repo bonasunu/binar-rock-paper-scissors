@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta author='Bonaventura Sunu'>
+    <link rel="shortcut icon" href="./assets/logo-games.ico" type="image/x-icon">
     <title>Rock Paper Scissor</title>
     <link rel="stylesheet" href="main.css">
     <script src="main.js"></script>
@@ -22,14 +23,14 @@
             <h1 class="player">
                 PLAYER 1
             </h1>
-            <figure class="figure">
-                <input type="image" src="./assets/rock.png" class="choice-player" onclick="choose(0)">
+            <figure class="figure" id="rock">
+                <input type="image" src="./assets/rock.png" class="choice-player choice-hover" onclick="choose(0)" id="rock-img">
             </figure>
-            <figure class="figure">
-                <input type="image" src="./assets/paper.png" class="choice-player" onclick="choose(1)">
+            <figure class="figure" id="paper">
+                <input type="image" src="./assets/paper.png" class="choice-player choice-hover" onclick="choose(1)">
             </figure>
-            <figure class="figure">
-                <input type="image" src="./assets/scissors.png" class="choice-player" onclick="choose(2)">
+            <figure class="figure" id="scissors">
+                <input type="image" src="./assets/scissors.png" class="choice-player choice-hover" onclick="choose(2)">
             </figure>
         </div>
         <div class="result">
@@ -64,13 +65,13 @@
             <h1 class="player">
                 COM
             </h1>
-            <figure class="figure">
-                <img src="./assets/rock.png" alt="Rock" class="choice-com">
+            <figure class="figure" id="com-rock">
+                <img src="./assets/rock.png" alt="Rock" class="choice-com" id="rock-img-com">
             </figure>
-            <figure class="figure">
+            <figure class="figure" id="com-paper">
                 <img src="./assets/paper.png" alt="Paper" class="choice-com">
             </figure>
-            <figure class="figure">
+            <figure class="figure" id="com-scissors">
                 <img src="./assets/scissors.png" alt="Scissors" class="choice-com">
             </figure>
         </div>

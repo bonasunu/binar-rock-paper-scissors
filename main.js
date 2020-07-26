@@ -13,7 +13,7 @@
 // TODO set cursor after submit input, style grey bg after input, implement reset style on refresh
 
 
-const winTable = [
+const WIN_Table = [
     ['d', 'p', 'c'],
     ['c', 'd', 'p'],
     ['p', 'c', 'd']
@@ -48,11 +48,19 @@ const result = player => {
 
 const choose = choice => {
     const playerChoice = ['rock', 'paper', 'scissors']
-    console.log('Player 1 choose', playerChoice[choice])
+    const comChoice = ['com-rock', 'com-paper', 'com-scissors']
 
+    console.log('Player 1 choose', playerChoice[choice])
     const random = Math.floor(Math.random() * 3)
+
+    document.getElementById(playerChoice[choice]).classList.add('chosen')
+    document.getElementById(comChoice[random]).classList.add('chosen')
+    document.querySelectorAll('.choice-player').forEach(choice => {
+        choice.classList.remove('choice-hover');
+        choice.style.cursor = 'default';
+    })
     
-    const gameResult = winTable[random][choice]
+    const gameResult = WIN_Table[random][choice]
 
     result(gameResult)
 }
@@ -67,4 +75,11 @@ const refresh = () => {
     document.getElementById('draw').style.display = 'none';
     document.getElementById('win-player').style.display = 'none';
     document.getElementById('win-com').style.display = 'none';
+    document.querySelectorAll('.choice-player').forEach(choice => {
+        choice.classList.add('choice-hover');
+        choice.style.cursor = 'pointer';
+    })
+    document.querySelectorAll('.figure').forEach(figure => {
+        figure.classList.remove('chosen');
+    })
 }
