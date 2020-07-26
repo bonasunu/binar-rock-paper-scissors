@@ -11,9 +11,6 @@
 <body>
     <header class="header">
         <div class="nav">
-            <!-- <a href="#">
-                <img src="./assets/back-arrow.svg">
-            </a> -->
             <img src="./assets/logo.svg" alt="Logo Rock Paper Scissors">
             <h1 class="tagline">
                 ROCK PAPER SCISSORS
@@ -25,23 +22,23 @@
             <h1 class="player">
                 PLAYER 1
             </h1>
-            <figure class="figure" onclick="choose(0)">
-                <img src="./assets/rock.png" alt="Rock" class="choice-player">
+            <figure class="figure">
+                <input type="image" src="./assets/rock.png" class="choice-player" onclick="choose(0)">
             </figure>
-            <figure class="figure" onclick="choose(1)">
-                <img src="./assets/paper.png" alt="Paper" class="choice-player">
+            <figure class="figure">
+                <input type="image" src="./assets/paper.png" class="choice-player" onclick="choose(1)">
             </figure>
-            <figure class="figure" onclick="choose(2)">
-                <img src="./assets/scissors.png" alt="Scissors" class="choice-player">
+            <figure class="figure">
+                <input type="image" src="./assets/scissors.png" class="choice-player" onclick="choose(2)">
             </figure>
         </div>
         <div class="result">
-            <div class="vs">
+            <div class="vs" id="vs">
                 <p>
                     VS
                 </p>
             </div>
-            <div class="win-player">
+            <div class="win-player" id="win-player">
                 <p>
                     PLAYER 1
                 </p>
@@ -49,7 +46,7 @@
                     WIN
                 </p>
             </div>
-            <div class="win-com">
+            <div class="win-com" id="win-com">
                 <p>
                     COM
                 </p>
@@ -57,7 +54,7 @@
                     WIN
                 </p>
             </div>
-            <div class="draw">
+            <div class="draw" id="draw">
                 <p>
                     DRAW
                 </p>
@@ -79,7 +76,7 @@
         </div>
     </main>
     <section class="refresh">
-        <figure>
+        <figure onclick="refresh()">
             <img src="./assets/refresh.png" class="refresh-btn">
         </figure>
     </section>

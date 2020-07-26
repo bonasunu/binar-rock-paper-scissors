@@ -10,6 +10,8 @@
 
 // implement refresh button - display none to result info
 
+// TODO set cursor after submit input, style grey bg after input, implement reset style on refresh
+
 
 const winTable = [
     ['d', 'p', 'c'],
@@ -17,13 +19,30 @@ const winTable = [
     ['p', 'c', 'd']
 ]
 
+const disableInput = () => {
+    document.querySelectorAll('.choice-player').forEach(input => {
+        input.setAttribute('disabled', 'disabled')
+    })
+}
+
 const result = player => {
     if (player === 'd') {
         console.log('Draw!')
-    } else if (player === 'p') {
-        console.log('Player 1 win')
-    } else if (player === 'c') {
-        console.log('Com win')
+        document.getElementById('vs').style.display = 'none'
+        document.getElementById('draw').style.display = 'block';
+        disableInput()
+    } 
+    else if (player === 'p') {
+        console.log('Player 1 win!')
+        document.getElementById('vs').style.display = 'none'
+        document.getElementById('win-player').style.display = 'block';
+        disableInput()
+    } 
+    else if (player === 'c') {
+        console.log('Com win!')
+        document.getElementById('vs').style.display = 'none'
+        document.getElementById('win-com').style.display = 'block';
+        disableInput()
     }
 }
 
@@ -40,4 +59,12 @@ const choose = choice => {
 
 const refresh = () => {
     console.log('Refresh!')
+    document.querySelectorAll('.choice-player').forEach(input => {
+        input.removeAttribute('disabled')
+    })
+
+    document.getElementById('vs').style.display = 'block'
+    document.getElementById('draw').style.display = 'none';
+    document.getElementById('win-player').style.display = 'none';
+    document.getElementById('win-com').style.display = 'none';
 }
