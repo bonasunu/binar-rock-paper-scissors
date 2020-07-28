@@ -10,7 +10,7 @@
 
 // implement refresh button - display none to result info
 
-// TODO set cursor after submit input, style grey bg after input, implement reset style on refresh
+// TODO implement responsive, disable not opacity, player cannot click after game
 
 
 const WIN_Table = [
