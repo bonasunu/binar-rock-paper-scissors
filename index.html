@@ -24,13 +24,13 @@
                 PLAYER 1
             </h1>
             <figure class="figure" id="rock">
-                <input type="image" src="./assets/rock.png" class="choice-player choice-hover" onclick="choose(0)" id="rock-img">
+                <input type="image" src="./assets/rock.png" class="choice-player choice-hover" onclick="getChoice(0)" id="rock-img">
             </figure>
             <figure class="figure" id="paper">
-                <input type="image" src="./assets/paper.png" class="choice-player choice-hover" onclick="choose(1)">
+                <input type="image" src="./assets/paper.png" class="choice-player choice-hover" onclick="getChoice(1)">
             </figure>
             <figure class="figure" id="scissors">
-                <input type="image" src="./assets/scissors.png" class="choice-player choice-hover" onclick="choose(2)">
+                <input type="image" src="./assets/scissors.png" class="choice-player choice-hover" onclick="getChoice(2)">
             </figure>
         </div>
         <div class="result">
@@ -77,7 +77,7 @@
         </div>
     </main>
     <section class="refresh">
-        <figure onclick="refresh()">
+        <figure onclick="refreshGame()">
             <img src="./assets/refresh.png" class="refresh-btn">
         </figure>
     </section>

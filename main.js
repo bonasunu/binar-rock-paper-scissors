@@ -13,7 +13,7 @@
 // TODO implement responsive, disable not opacity, player cannot click after game
 
 
-const WIN_Table = [
+const WIN_TABLE = [
     ['d', 'p', 'c'],
     ['c', 'd', 'p'],
     ['p', 'c', 'd']
@@ -25,47 +25,50 @@ const disableInput = () => {
     })
 }
 
-const result = player => {
+const disableVersus = () => document.getElementById('vs').style.display = 'none'
+
+
+const showResult = player => {
     if (player === 'd') {
         console.log('Draw!')
-        document.getElementById('vs').style.display = 'none'
-        document.getElementById('draw').style.display = 'block';
+        disableVersus()
+        document.getElementById('draw').style.display = 'block'
         disableInput()
     } 
     else if (player === 'p') {
         console.log('Player 1 win!')
-        document.getElementById('vs').style.display = 'none'
-        document.getElementById('win-player').style.display = 'block';
+        disableVersus()
+        document.getElementById('win-player').style.display = 'block'
         disableInput()
     } 
     else if (player === 'c') {
         console.log('Com win!')
-        document.getElementById('vs').style.display = 'none'
-        document.getElementById('win-com').style.display = 'block';
+        disableVersus()
+        document.getElementById('win-com').style.display = 'block'
         disableInput()
     }
 }
 
-const choose = choice => {
-    const playerChoice = ['rock', 'paper', 'scissors']
-    const comChoice = ['com-rock', 'com-paper', 'com-scissors']
+const getChoice = choice => {
+    const PLAYER_CHOICE = ['rock', 'paper', 'scissors']
+    const COM_CHOICE = ['com-rock', 'com-paper', 'com-scissors']
 
-    console.log('Player 1 choose', playerChoice[choice])
+    console.log('Player 1 choose', PLAYER_CHOICE[choice])
     const random = Math.floor(Math.random() * 3)
 
-    document.getElementById(playerChoice[choice]).classList.add('chosen')
-    document.getElementById(comChoice[random]).classList.add('chosen')
+    document.getElementById(PLAYER_CHOICE[choice]).classList.add('chosen')
+    document.getElementById(COM_CHOICE[random]).classList.add('chosen')
     document.querySelectorAll('.choice-player').forEach(choice => {
         choice.classList.remove('choice-hover');
         choice.style.cursor = 'default';
     })
     
-    const gameResult = WIN_Table[random][choice]
+    const gameResult = WIN_TABLE[random][choice]
 
-    result(gameResult)
+    showResult(gameResult)
 }
 
-const refresh = () => {
+const refreshGame = () => {
     console.log('Refresh!')
     document.querySelectorAll('.choice-player').forEach(input => {
         input.removeAttribute('disabled')
@@ -75,10 +78,12 @@ const refresh = () => {
     document.getElementById('draw').style.display = 'none';
     document.getElementById('win-player').style.display = 'none';
     document.getElementById('win-com').style.display = 'none';
+
     document.querySelectorAll('.choice-player').forEach(choice => {
         choice.classList.add('choice-hover');
         choice.style.cursor = 'pointer';
     })
+
     document.querySelectorAll('.figure').forEach(figure => {
         figure.classList.remove('chosen');
     })
