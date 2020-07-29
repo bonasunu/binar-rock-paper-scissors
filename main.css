@@ -2,29 +2,50 @@ body {
     background-color: #9B835F;
 }
 
-.main {
-    text-align: center;
-    justify-content: center;
-}
-
-.nav {
-    display: flex;
-    flex-direction: row;
-    vertical-align: middle;
-    margin: 0.5rem;
+.logo {
+  display: flex;
+  flex-direction: row;
 }
 
 .tagline {
     font-size: 2rem;
     font-family: sans-serif;
+    font-weight: bold;
     color: #F9B23D;
     margin-left: 1rem;
+    margin-top: 0.5rem;
 }
 
-.main {
-    display: flex;
-    flex-direction: row;
-    vertical-align: middle;
+.box {
+  border: 2px solid yellow;
+  text-align: center;
+}
+
+.result {
+  text-align: center;
+  border: blue 2px solid;
+}
+
+.com {
+  border: greenyellow 2px solid;
+}
+
+input {
+  color: none !important;
+}
+
+.figure {
+  height: 10rem;
+  text-align: center;
+}
+
+.chosen {
+    background-color: #C4C4C4;
+    border-radius: 1rem;
+}
+
+.choice-hover:hover {
+    transform: scale(1.2) rotate(15deg);
 }
 
 .choice-player {
@@ -40,36 +61,11 @@ body {
     margin: 1rem;
 }
 
-.figure {
-    height: 10rem;
-    width: 8rem;
-    vertical-align: middle;
-}
-
-#rock-img,
-#rock-img-com {
-    margin-top: 3rem;
-}
-
-.chosen {
-    background-color: #C4C4C4;
-    border-radius: 1rem;
-}
-
-.choice-hover:hover {
-    transform: scale(1.2) rotate(15deg);
-}
-
 .player {
     font-family: sans-serif;
     letter-spacing: 0.2rem;
-}
-
-.result {
-    margin-left: 2rem;
-    margin-right: 2rem;
-    padding-top: 7rem;
-    width: 12rem;
+    border: solid 1px yellow;
+    text-align: center;
 }
 
 .vs {
@@ -78,6 +74,9 @@ body {
     font-weight: bolder;
     font-family: sans-serif;
     display: block;
+    border: solid 2px red;
+    margin-top: 12.5rem;
+    margin-bottom: 3rem;
 }
 
 .win-player,
@@ -91,7 +90,10 @@ body {
     padding-bottom: 0.1rem;
     margin-top: 10rem;
     background-color: #4C9654;
-    transform: rotate(-20deg);
+    transform: rotate(-15deg);
+    height: 10rem;
+    padding-top: 2.5rem;
+    margin-bottom: 10rem;
 }
 
 .win-player {
@@ -112,9 +114,10 @@ body {
     padding-bottom: 0.1rem;
     margin-top: 10rem;
     background-color: #035B0C;
-    transform: rotate(-20deg);
-    height: 5rem;
-    padding-top: 10%;
+    transform: rotate(-15deg);
+    height: 10rem;
+    padding-top: 3.5rem;
+    margin-bottom: 10rem;
 }
 
 .draw {
