@@ -14,25 +14,25 @@ const disableInput = () => {
 }
 
 // hide versus info when result is visible
-const disableVersus = () => document.getElementById('vs').style.display = 'none'
+const hideVersus = () => document.getElementById('vs').style.display = 'none'
 
 // show game result. 
 const showResult = result => {
     if (result === 'd') {
         console.log('Draw!')
-        disableVersus()
+        hideVersus()
         document.getElementById('draw').style.display = 'block'
         disableInput()
     } 
     else if (result === 'p') {
         console.log('Player 1 win!')
-        disableVersus()
+        hideVersus()
         document.getElementById('win-player').style.display = 'block'
         disableInput()
     } 
     else if (result === 'c') {
         console.log('Com win!')
-        disableVersus()
+        hideVersus()
         document.getElementById('win-com').style.display = 'block'
         disableInput()
     }
