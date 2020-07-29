@@ -18,24 +18,16 @@ const hideVersus = () => document.getElementById('vs').style.display = 'none'
 
 // show game result. 
 const showResult = result => {
-    if (result === 'd') {
-        console.log('Draw!')
-        hideVersus()
-        document.getElementById('draw').style.display = 'block'
-        disableInput()
-    } 
-    else if (result === 'p') {
-        console.log('Player 1 win!')
-        hideVersus()
-        document.getElementById('win-player').style.display = 'block'
-        disableInput()
-    } 
-    else if (result === 'c') {
-        console.log('Com win!')
-        hideVersus()
-        document.getElementById('win-com').style.display = 'block'
-        disableInput()
-    }
+  const resultInfo = {
+    'd': ['Draw!', 'draw'],
+    'p': ['Player 1 win!', 'win-player'],
+    'c': ['Com win!', 'win-com']
+  }
+
+  console.log(resultInfo[result][0])
+  hideVersus()
+  document.getElementById(resultInfo[result][1]).style.display = 'block'
+  disableInput()
 }
 
 // get player 1 choice and compare it to com choice. Then invoke show game result function
