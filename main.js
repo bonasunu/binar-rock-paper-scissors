@@ -1,4 +1,3 @@
-// TODO implement responsive, disable not opacity, player cannot click after game, restyle disabled input
 // two dimentional array for game result probability
 // 'd' = draw, 'p' = player 1 win, 'c' = com win
 const WIN_TABLE = [
