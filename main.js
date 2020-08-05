@@ -1,4 +1,4 @@
-// two dimentional array for game result probability
+// array for game result probability
 // 'd' = draw, 'p' = player 1 win, 'c' = com win
 const WIN_TABLE = [
   ['d', 'p', 'c'],
