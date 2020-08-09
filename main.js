@@ -18,6 +18,7 @@ const hideVersus = () => document.getElementById('vs').style.display = 'none'
 
 // show game result. 
 const showResult = result => {
+  // Object contains result as key, and [log info, css class to manipulate] as value
   const resultInfo = {
     'd': ['Draw!', 'draw'],
     'p': ['Player 1 win!', 'win-player'],
