@@ -1,4 +1,4 @@
-# Challenge 4 - Binar Academy Bootcamp
+# Rock Paper Scissors Game
 ## by Bonaventura Sunu
 
 ### Demo
