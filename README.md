@@ -2,7 +2,7 @@
 ## by Bonaventura Sunu
 
 ### Demo
-https://bonasunu.github.io/binar-rock-paper-scissors/
+https://bonasunu.github.io/rock-paper-scissors/
 
 ### Detail
 - Rock Paper Scissors Game using HTML, CSS, Bootstrap, and vanilla JavaScript
